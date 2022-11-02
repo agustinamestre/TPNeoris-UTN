@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 15px;
+  border: 0;
+  font-size: 14pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(72, 56, 73);
+  background-color: #d6d6d6;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.loader {
+  min-width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #d6d6d6;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.card {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eee2df;
+  box-shadow: 0px 10px 50px -15px rgb(72, 56, 73);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.image {
+  border: rosybrown solid 5px;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+}
+
+.card-titles {
+  text-align: center;
+  position: relative;
+}
+
+.card-titles .username {
+  margin: 0;
+  margin-top: 10px;
+  line-height: 1.6rem;
+}
+
+.card-titles .bio {
+  font-size: 1rem;
+}
+
+.content {
+  background-color: #dfcec9;
+  opacity: 0.9;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  line-height: 4px;
+  border-radius: 10px;
+}
+
+.estadistic {
+  text-align: center;
+}
+
+.social {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.button-volver {
+  margin: 20px;
+  border-radius: 20px;
+  border: 2px solid rosybrown;
+  background-color: #eee2df;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.social .icon {
+  width: 35px;
+  margin-right: 40px;
+}
+
+.social-link:last-of-type .icon {
+  margin: 0;
+}

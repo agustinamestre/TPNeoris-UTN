@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://icongr.am/fontawesome/coffee.svg?size=30&color=currentColor"
+    />
+    <title>Tina's Coffee - Cotización</title>
+    <link rel="stylesheet" href="/css/cotizacion.css" />
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <p class="modaltitulo">¿Estás seguro que querés salir?</p>
+        <button class="cancelar">Cancelar</button>
+        <button class="aceptar" onclick="history.back()">Aceptar</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="container-form">
+        <div class="buttonback" id="myBtn">
+          <img
+            class="imageButton"
+            src="https://icongr.am/fontawesome/close.svg?size=25&color=483849"
+            alt=""
+          />
+        </div>
+        <form id="regForm" name="regForm" onsubmit="return false;">
+          <h1>Cotización</h1>
+          <section id="step-1" class="form-step">
+            <h2>¿A dónde te lo enviamos?</h2>
+            <div class="content">
+              <div class="item itemZona" id="local">
+                <h3 class="titulo">Retiro por local</h3>
+                <p class="descripcion">Mitre 200, Rosario, Santa Fe</p>
+              </div>
+              <div class="item itemZona" id="amba">
+                <h3 class="titulo">AMBA</h3>
+                <p class="descripcion">Área Metropolitana de Buenos Aires</p>
+              </div>
+              <div class="item itemZona" id="pba">
+                <h3 class="titulo">PBA</h3>
+                <p class="descripcion">Provincia de Buenos Aires</p>
+              </div>
+              <div class="item itemZona" id="centro">
+                <h3 class="titulo">Centro</h3>
+                <p class="descripcion">
+                  Córdoba, Entre Ríos, Santa Fe, La Pampa, Mendoza, San Juan y
+                  San Luis
+                </p>
+              </div>
+              <div class="item itemZona" id="norte">
+                <h3 class="titulo">Norte</h3>
+                <p class="descripcion">
+                  Catamarca, La Rioja, Tucumán, Salta, Jujuy, Santiago del
+                  Estero, Chaco, Formosa, Corrientes y Misiones
+                </p>
+              </div>
+              <div class="item itemZona" id="patagonia">
+                <h3 class="titulo">Patagonia</h3>
+                <p class="descripcion">
+                  Neuquén, Rio Negro, Chubut, Santa Cruz y Tierra del Fuego
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <button
+                class="button btn-navigate-form-step"
+                type="button"
+                step_number="2"
+              >
+                Siguiente
+              </button>
+            </div>
+          </section>
+
+          <section id="step-2" class="form-step d-none">
+            <h2>¿Qué tipo de café te gustaría recibir?</h2>
+            <div class="content">
+              <div class="item itemTipoCafe" id="especialidad">
+                <figure class="imagen-content">
+                  <img src="/assets/especialidad.png" alt="" class="imagen" />
+                </figure>
+                <h3 class="titulo">Especialidad</h3>
+                <p class="descripcion">
+                  Cafés del mayor puntaje, de lotes exclusivos que se distinguen
+                  por su sabor, aroma y ausencia de defectos. 
+                </p>
+              </div>
+              <div class="item itemTipoCafe" id="origen">
+                <figure class="imagen-content-origen">
+                  <img src="/assets/origen.png" alt="" class="imagen-origen" />
+                </figure>
+                <h3 class="titulo">Origen</h3>
+                <p class="descripcion">
+                  Cafés que provienen de un pais determinado y que responde a
+                  estándares de calidad y aromas que reflejan directamente las
+                  características concretas de ese origen.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <button
+                class="button btn-navigate-form-step"
+                type="button"
+                step_number="1"
+              >
+                Anterior
+              </button>
+              <button
+                class="button btn-navigate-form-step"
+                type="button"
+                step_number="3"
+              >
+                Siguiente
+              </button>
+            </div>
+          </section>
+
+          <section id="step-3" class="form-step d-none">
+            <h2>¿Cuánto querés por cada envío?</h2>
+            <div class="content">
+              <div class="item itemCantidad">
+                <h3 class="titulo">250gr</h3>
+                <p class="descripcion">
+                  Para los que se toman un café de vez en cuando, después de una
+                  comida o en situaciones especiales.
+                </p>
+              </div>
+              <div class="item itemCantidad">
+                <h3 class="titulo">500gr</h3>
+                <p class="descripcion">
+                  Para los que necesitan arrancar todos los días con energia.
+                  Ideal para todo el mes.
+                </p>
+              </div>
+              <div class="item itemCantidad">
+                <h3 class="titulo">750gr</h3>
+                <p class="descripcion">
+                  Pensado para compartir con la familia cafetera.
+                </p>
+              </div>
+              <div class="item itemCantidad">
+                <h3 class="titulo">1kg</h3>
+                <p class="descripcion">
+                  Para los fanáticos del cáfe.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <button
+                class="button btn-navigate-form-step"
+                type="button"
+                step_number="2"
+              >
+                Anterior
+              </button>
+              <button
+                class="button btn-navigate-form-step"
+                type="button"
+                step_number="4"
+              >
+                Siguiente
+              </button>
+            </div>
+          </section>
+
+          <section id="step-4" class="form-step d-none">
+            <h2>¿Qué molido necesitás?</h2>
+            <div class="content">
+              <div class="item itemTipoMolido">
+                <h3 class="titulo">Fino</h3>
+                <p class="descripcion">
+                  Un molido ideal para cafetera Espresso o Cápsulas Recargables.
+                </p>
+              </div>
+              <div class="item itemTipoMolido">
+                <h3 class="titulo">Medio</h3>
+                <p class="descripcion">
+                  Perfecto para filtro (Chemex, Aeropress), Moka (Volturno) o
+                  Cafetera Eléctrica.
+                </p>
+              </div>
+              <div class="item itemTipoMolido">
+                <h3 class="titulo">Grueso</h3>
+                <p class="descripcion">
+                  Específico para preparar en Prensa francesa o Cold brew.
+                </p>
+              </div>
+              <div class="item itemTipoMolido">
+                <h3 class="titulo">Granos</h3>
+                <p class="descripcion">Para moler a tu propio gusto.</p>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <button
+                class="button btn-navigate-form-step"
+                type="button"
+                step_number="3"
+              >
+                Anterior
+              </button>
+              <button
+                class="button btn-navigate-form-step"
+                type="button"
+                step_number="5"
+              >
+                Siguiente
+              </button>
+            </div>
+          </section>
+
+          <section id="step-5" class="form-step d-none">
+            <h2>¿Con qué frecuencia querés tu café?</h2>
+            <div class="content">
+              <div class="item itemFrecuencia">
+                <div>
+                  <img src="/assets/periocidad.png" alt="" class="imagen" />
+                </div>
+                <h3 class="titulo">Mensual</h3>
+                <p class="descripcion"></p>
+              </div>
+              <div class="item itemFrecuencia">
+                <div>
+                  <img src="/assets/periocidad.png" alt="" class="imagen" />
+                  <img src="/assets/periocidad.png" alt="" class="imagen" />
+                </div>
+                <h3 class="titulo">Bimestral</h3>
+                <p class="descripcion"></p>
+              </div>
+              <div class="item itemFrecuencia">
+                <div>
+                  <img src="/assets/periocidad.png" alt="" class="imagen" />
+                  <img src="/assets/periocidad.png" alt="" class="imagen" />
+                  <img src="/assets/periocidad.png" alt="" class="imagen" />
+                </div>
+                <h3 class="titulo">Trimestral</h3>
+                <p class="descripcion"></p>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <button
+                class="button btn-navigate-form-step"
+                type="button"
+                step_number="4"
+              >
+                Anterior
+              </button>
+              <button
+                class="button btn-navigate-form-step"
+                type="button"
+                step_number="6"
+              >
+                Siguiente
+              </button>
+            </div>
+          </section>
+
+          <section id="step-6" class="form-step d-none">
+            <h2>Ingresá tu Nombre, Apellido e Email</h2>
+            <h3>
+              Con estos datos te podemos contactar y enviar la cotización.
+            </h3>
+            <div class="input-content">
+              <input
+                placeholder="Nombre y Apellido"
+                oninput="this.className = ''"
+                name="apelnom"
+                id="apelnom"
+              />
+              <input
+                placeholder="Email"
+                name="email"
+                oninput="this.className = ''"
+              />
+              <div class="validaciones"></div>
+            </div>
+
+
+            <div class="mt-3">
+              <button
+                class="button btn-navigate-form-step"
+                type="button"
+                step_number="5"
+              >
+                Anterior
+              </button>
+              <button class="button" id="enviar">Enviar</button>
+            </div>
+          </section>
+        </form>
+      </div>
+
+      <div class="resumen">
+        <h2 class="resumen-titulo">Resumen</h2>
+        <h3>Resumen Cotizacion</h3>
+        <div class="resumenContent"></div>
+      </div>
+    </div>
+    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.min.js"
+      integrity="sha512-8GLIg5ayTvD6F9ML/cSRMD19nHqaLPWxISikfc5hsMJyX7Pm+IIbHlhBDY2slGisYLBqiVNVll+71CYDD5RBqA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/js/jspdf.min.js"></script>
+    <script src="/js/cotizacion.js"></script>
+  </body>
+</html>

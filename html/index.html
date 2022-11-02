@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://icongr.am/fontawesome/coffee.svg?size=30&color=currentColor"
+    />
+    <link rel="stylesheet" href="/css/landing.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Tina's Coffee</title>
+  </head>
+  <body>
+    <!-- NAVBAR SECTION -->
+
+    <nav class="navbar">
+      <ul>
+        <li class="navbar-logo">Tina's</li>
+        <li class="navbar-toggle">
+          <img src="/assets/menu.png" alt="menu icon" />
+        </li>
+        <li class="navbar-links"><a href="#cotizacion">Cotización</a></li>
+        <li class="navbar-links"><a href="#productos">Novedades</a></li>
+        <li class="navbar-links"><a href="card.html">About Me</a></li>
+        <li class="navbar-links"><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- HEADER SECTION -->
+
+    <div class="header-slider">
+      <img name="slider" class="img-slider" />
+    </div>
+
+    <!-- PRODUCTOS SECTION -->
+    <section id="productos">
+      <h2 class="productos-tittle">Novedades del mes</h2>
+      <div class="card">
+        <article class="card_item">
+          <div class="card_content">
+            <figure class="card_picture">
+              <img src="/assets/colombia.png" alt="" class="card_img" />
+            </figure>
+            <div class="card_texts">
+              <h2 class="card_tittle">Santander | COLOMBIA| 250gr</h2>
+              <p class="card_paragraph">
+                <strong>Origen</strong>: Santander. <br />
+                <strong>Varietal</strong>: Typica, Castilla. <br />
+                <strong>Nota de cata</strong>: Azúcar morena, miel y cacao.
+              </p>
+            </div>
+          </div>
+        </article>
+        <article class="card_item ">
+          <div class="card_content">
+            <figure class="card_picture">
+              <img src="/assets/brasil.png" alt="" class="card_img" />
+            </figure>
+            <div class="card_texts">
+              <h2 class="card_tittle">Minas Gerais | BRASIL | 250gr</h2>
+              <p class="card_paragraph">
+                <strong>Origen</strong>: Minas Gerais. <br />
+                <strong>Varietal</strong>: Bourbon. <br />
+                <strong>Nota de cata</strong>: Azúcar mascabo, fruta madura y
+                chocolate.
+              </p>
+            </div>
+          </div>
+        </article>
+        <article class="card_item ">
+          <div class="card_content">
+            <figure class="card_picture">
+              <img src="/assets/etiopia.png" alt="" class="card_img" />
+            </figure>
+            <div class="card_texts">
+              <h2 class="card_tittle">Yirgacheffe | ETIOPIA | 250gr</h2>
+              <p class="card_paragraph">
+                <strong>Origen</strong>: Yirgacheffe. <br />
+                <strong>Varietal</strong>: Etiopía Heirloom. <br />
+                <strong>Nota de cata</strong>: Caramelo, cítricos y sabores
+                florales.
+              </p>
+            </div>
+          </div>
+        </article>
+        <article class="card_item">
+          <div class="card_content">
+            <figure class="card_picture">
+              <img src="/assets/guatemala.png" alt="" class="card_img" />
+            </figure>
+            <div class="card_texts">
+              <h2 class="card_tittle">Huehuetenango | GUATEMALA | 250g</h2>
+              <p class="card_paragraph">
+                <strong>Origen</strong>: Huehuetenango. <br />
+                <strong>Varietal</strong>: Caturra, Catuaí, Pache. <br />
+                <strong>Nota de cata</strong>: Chocolate, turrón, almendra
+                asada, cítricos.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COTIZACION SECTION -->
+    <section id="cotizacion">
+      <div class="cotizacion-content">
+        <div class="cotizacion-info">
+          <h2 class="cotizacion-titulo">¿Querés sumarte a nuestra membresía?</h2>
+          <p>¡No vuelvas a quedarte (nunca, jamás) sin café!</p>
+          <p>Vas a recibir el mejor café, recién tostado, sin moverte de tu casa. </p>
+          <p class="cotizacion-parrafo">Pedilo en granos o molido para tu cafetera favorita.</p>
+          <a href="cotizacion.html" class="cotizacion-button"> Pedir Cotización</a>
+        </div>
+        <div class="cotizacion-imagen">
+          <img class="cotizacion-imagen-imagen" src="/assets/cotizacion-img.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+
+    <section id="contact">
+      <h1 class="section-header">Contacto</h1>
+
+      <div class="contact-wrapper">
+        <form
+          id="contact-form"
+          name="contact-form"
+          class="form-horizontal"
+          onsubmit="return false;"
+        >
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="apelnom"
+              name="apelnom"
+              placeholder="NOMBRE Y APELLIDO"
+              value=""
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              class="form-control"
+              id="email"
+              placeholder="EMAIL"
+              name="email"
+              value=""
+            />
+          </div>
+
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="asunto"
+              placeholder="ASUNTO"
+              name="asunto"
+              value=""
+            />
+          </div>
+
+          <textarea
+            class="form-control"
+            rows="8"
+            placeholder="MENSAJE"
+            name="mensaje"
+          ></textarea>
+
+          <button class="send-button" id="enviar" type="submit">ENVIAR</button>
+
+          <div class="validaciones"></div>
+        </form>
+
+        <!-- PARTE DERECHA DEL FORMULARIO DE CONTACTO-->
+
+        <div class="direct-contact-container">
+          <ul class="contact-list">
+            <li class="list-item">
+              <img
+                src="https://icongr.am/feather/map-pin.svg?size=25&color=483849"
+                alt=""
+              />
+              <span class="contact-text place"
+                >Rosario, Santa Fe, Argentina.</span
+              >
+            </li>
+
+            <li class="list-item">
+              <img
+                src="https://icongr.am/feather/phone.svg?size=25&color=483849"
+                alt=""
+              />
+              <span class="contact-text phone">(341) 256803</span>
+            </li>
+
+            <li class="list-item">
+              <img
+                src="https://icongr.am/feather/instagram.svg?size=25&color=483849"
+                alt=""
+              />
+              <span class="contact-text instagram">tinascoffee</span>
+            </li>
+
+            <li class="list-item">
+              <img
+                src="https://icongr.am/feather/mail.svg?size=25&color=483849"
+                alt=""
+              />
+              <span class="contact-text gmail">tinascoffee@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <div class="copyright">&copy; TODOS LOS DERECHOS RESERVADOS</div>
+    </section>
+
+  
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.min.js"
+      integrity="sha512-8GLIg5ayTvD6F9ML/cSRMD19nHqaLPWxISikfc5hsMJyX7Pm+IIbHlhBDY2slGisYLBqiVNVll+71CYDD5RBqA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+  <script src="/js/landing.js"></script>
+</html>
