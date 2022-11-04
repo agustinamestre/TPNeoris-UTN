@@ -1,32 +1,85 @@
-//Define a function to navigate betweens form steps. It accepts one parameter. That is - step number.
+//esta funcion recibe el numero de la pagina, va agregando y eliminando el display none
 const navigateToFormStep = (stepNumber) => {
-  //Hide all form steps.
   document.querySelectorAll(".form-step").forEach((formStepElement) => {
     formStepElement.classList.add("d-none");
 
-    //Show the current form step (as passed to the function).
     document.querySelector("#step-" + stepNumber).classList.remove("d-none");
   });
 };
 
-//Select all form navigation buttons, and loop through them.
-document
-  .querySelectorAll(".btn-navigate-form-step")
-  .forEach((formNavigationBtn) => {
-    formNavigationBtn.addEventListener("click", () => {
-      //  Get the value of the step.
-      const stepNumber = parseInt(
-        formNavigationBtn.getAttribute("step_number")
-      );
-      //  Call the function to navigate to the target form step.
-      navigateToFormStep(stepNumber);
-    });
+//al hacer click en una de las opciones te manda a la pagina siguiente.
+//mejorar repeticion de codigo.
+
+const norte = document.getElementById("norte");
+const local = document.getElementById("local");
+const amba = document.getElementById("amba");
+const pba = document.getElementById("pba");
+const centro = document.getElementById("centro");
+const patagonia = document.getElementById("patagonia");
+
+const zonaItems = [norte, local, amba, pba, centro, patagonia];
+
+zonaItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    navigateToFormStep(2);
   });
+});
+
+const especialidad = document.getElementById("especialidad");
+const origen = document.getElementById("origen");
+
+const tipoCafe = [especialidad, origen];
+
+tipoCafe.forEach((item) => {
+  item.addEventListener("click", () => {
+    navigateToFormStep(3);
+  });
+});
+
+const dosCincuenta = document.getElementById("250");
+const quinientos = document.getElementById("500");
+const sieteCincuenta = document.getElementById("750");
+const kilo = document.getElementById("1kg");
+
+const cantidadCafe = [dosCincuenta, quinientos, sieteCincuenta, kilo];
+
+cantidadCafe.forEach((item) => {
+  item.addEventListener("click", () => {
+    navigateToFormStep(4);
+  });
+});
+
+const fino = document.getElementById("fino");
+const medio = document.getElementById("medio");
+const grueso = document.getElementById("grueso");
+const granos = document.getElementById("granos");
+
+const tipoMolido = [fino, medio, grueso, granos];
+
+tipoMolido.forEach((item) => {
+  item.addEventListener("click", () => {
+    navigateToFormStep(5);
+  });
+});
+
+const mensual = document.getElementById("mensual");
+const bimestral = document.getElementById("bimestral");
+const trimestral = document.getElementById("trimestral");
+
+const frecuencia = [mensual, bimestral, trimestral];
+
+frecuencia.forEach((item) => {
+  item.addEventListener("click", () => {
+    navigateToFormStep(6);
+  });
+});
+
+const volver = () => {
+  location.reload();
+};
 
 ////////////////////////////////////////////////////////////////////////////
-//VALIDAR LOS INPUTS
-const apelnom = document.getElementById("apelnom");
-
+//Aca valido los inputs nombre y apllido e email
 window.addEventListener("load", () => {
   let validarCamposForm = new FormValidator(
     "regForm",
@@ -83,6 +136,8 @@ const itemsGeneral = [
   itemFrecuencia,
 ];
 
+//aca se itera sobre los items y les agrega la clase selected y copia el textContent del item seleccionado al resumen
+
 for (const items of itemsGeneral) {
   for (const item of items) {
     item.addEventListener("click", (e) => {
@@ -97,8 +152,8 @@ for (const items of itemsGeneral) {
 }
 
 //FUNCION GENERAR PDF
-function generarPDF() {
-  var doc = new jsPDF( "p", "pt", "letter");
+const generarPDF = () => {
+  var doc = new jsPDF();
 
   doc.setTextColor(72, 56, 73);
   doc.setFont("courier");
@@ -109,16 +164,16 @@ function generarPDF() {
   doc.fromHTML(resumenContent.innerHTML);
 
   doc.save("TinasCoffeeCotizacion.pdf");
-}
+
+  resumenContent.innerHTML = "";
+};
 
 //MODAL
-// Get the modal
 var modal = document.getElementById("myModal");
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 var cancelar = document.getElementsByClassName("cancelar")[0];
 
-// When the user clicks on the button, open the modal
+// cuando se hace click en el icono, se abre el modal
 btn.onclick = function () {
   modal.style.display = "block";
 };
@@ -127,7 +182,7 @@ cancelar.onclick = function () {
   modal.style.display = "none";
 };
 
-// When the user clicks anywhere outside of the modal, close it
+//aca se cierra el modal cuando se hacle click en cualquier otro lugar
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";

@@ -88,12 +88,17 @@ body {
 }
 
 .button-volver {
-  margin: 20px;
-  border-radius: 20px;
-  border: 2px solid rosybrown;
-  background-color: #eee2df;
+  width: 150px;
+  height: 30px;
+  background: rosybrown;
   padding: 10px;
-  font-size: 15px;
+  text-align: center;
+  border-radius: 5px;
+  color: rgb(72, 56, 73);
+  line-height: 10px;
+  text-decoration: none;
+  margin: 15px 3px 0px 3px;
+  font-weight: 500;
 }
 
 .social .icon {

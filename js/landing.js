@@ -13,7 +13,6 @@ toggleButton.addEventListener("click", () => {
 
 let i = 0;
 let img = [];
-let time = 4000;
 
 img[0] = "/assets/1.png";
 img[1] = "/assets/4.png";
@@ -25,7 +24,7 @@ const changeImg = () => {
 
   i < img.length - 1 ? i++ : (i = 0);
 
-  setTimeout("changeImg()", time);
+  setTimeout("changeImg()", 3000);
 };
 
 window.onload = changeImg;

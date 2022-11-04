@@ -44,10 +44,10 @@ h3 {
 
 .buttonback {
   width: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: end;
+  margin-top: 20px;
 }
+
+
 .imageButton {
   float: right;
 }
@@ -57,6 +57,7 @@ h3 {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 150px;
 }
 
 .item {
@@ -119,27 +120,25 @@ input[type="radio"] {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 0;
 }
+
 
 input {
   padding: 10px;
-  width: 80%;
   font-size: 17px;
   border: 2px solid rosybrown;
   color: #483849;
   margin: 5px;
   background-color: #fafafa;
+  width: 500px;
 }
 
 .mt-3 {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Mark input boxes that gets an error on validation: */
-input.invalid {
-  background-color: #ffdddd;
+  margin-bottom: 150px;
 }
 
 .imagen-content {
@@ -184,6 +183,10 @@ input.invalid {
 .button,
 .submit-btn {
   margin: 30px;
+}
+
+#enviar{
+  font-weight: 750;
 }
 
 .validaciones {
@@ -252,7 +255,18 @@ input.invalid {
     justify-content: center;
     flex-direction: column;
   }
+
+  input{
+    width: 400px;
+  }
 }
+
+@media (max-width: 500px) {
+  input{
+    width: 300px;
+  }
+}
+
 
 /* The Modal*/
 .modal {
